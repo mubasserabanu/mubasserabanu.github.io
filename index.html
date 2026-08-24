@@ -1,1 +1,1449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mubasserabanu Shaikh | Web Developer & WordPress Developer</title>
+
+    <meta name="description"
+          content="Mubasserabanu Shaikh - Web Developer and WordPress Developer specializing in responsive websites, PHP, WordPress, SEO, website deployment and modern web development.">
+
+    <meta name="keywords"
+          content="Mubasserabanu Shaikh, Web Developer, WordPress Developer, PHP Developer, Website Developer, SEO, WordPress, HTML, CSS, JavaScript, PHP">
+
+    <meta name="author" content="Mubasserabanu Shaikh">
+
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:title"
+          content="Mubasserabanu Shaikh | Web Developer">
+
+    <meta property="og:description"
+          content="Personal portfolio of Mubasserabanu Shaikh - Web Developer and WordPress Developer.">
+
+    <meta property="og:type" content="website">
+
+    <link rel="canonical"
+          href="https://mubasserabanu.github.io/">
+
+    <style>
+
+        /* =========================
+           RESET
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #070b16;
+            color: #ffffff;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        /* =========================
+           BACKGROUND
+        ========================= */
+
+        body::before {
+            content: "";
+            position: fixed;
+            width: 500px;
+            height: 500px;
+            background: rgba(99, 102, 241, 0.15);
+            filter: blur(120px);
+            border-radius: 50%;
+            top: -150px;
+            left: -150px;
+            z-index: -2;
+            animation: floatGlow 8s ease-in-out infinite;
+        }
+
+        body::after {
+            content: "";
+            position: fixed;
+            width: 450px;
+            height: 450px;
+            background: rgba(14, 165, 233, 0.12);
+            filter: blur(120px);
+            border-radius: 50%;
+            bottom: -150px;
+            right: -100px;
+            z-index: -2;
+            animation: floatGlow 10s ease-in-out infinite reverse;
+        }
+
+        @keyframes floatGlow {
+            0%, 100% {
+                transform: translate(0, 0);
+            }
+
+            50% {
+                transform: translate(50px, 40px);
+            }
+        }
+
+        /* =========================
+           NAVIGATION
+        ========================= */
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            backdrop-filter: blur(18px);
+            background: rgba(7, 11, 22, 0.75);
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+
+        nav {
+            max-width: 1150px;
+            margin: auto;
+            height: 75px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 25px;
+        }
+
+        .logo {
+            font-size: 21px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+
+        .logo span {
+            color: #818cf8;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: 14px;
+            color: #cbd5e1;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #818cf8;
+        }
+
+        .menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 27px;
+            cursor: pointer;
+        }
+
+        /* =========================
+           GENERAL
+        ========================= */
+
+        .container {
+            max-width: 1150px;
+            margin: auto;
+            padding: 0 25px;
+        }
+
+        section {
+            padding: 110px 0;
+        }
+
+        .section-label {
+            color: #818cf8;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .section-title {
+            font-size: clamp(32px, 5vw, 52px);
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+
+        .section-text {
+            color: #94a3b8;
+            max-width: 700px;
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-top: 100px;
+        }
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+        .availability {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            border: 1px solid rgba(129,140,248,0.25);
+            background: rgba(129,140,248,0.08);
+            padding: 8px 14px;
+            border-radius: 50px;
+            color: #c7d2fe;
+            font-size: 13px;
+            margin-bottom: 25px;
+        }
+
+        .availability-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #22c55e;
+            box-shadow: 0 0 12px #22c55e;
+        }
+
+        .hero h1 {
+            font-size: clamp(48px, 8vw, 88px);
+            line-height: 0.98;
+            letter-spacing: -4px;
+            margin-bottom: 25px;
+        }
+
+        .gradient-text {
+            background: linear-gradient(
+                90deg,
+                #818cf8,
+                #38bdf8,
+                #c084fc
+            );
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        .hero-description {
+            color: #94a3b8;
+            font-size: 18px;
+            max-width: 700px;
+            margin-bottom: 35px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 13px 22px;
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: 700;
+            transition: 0.3s;
+        }
+
+        .btn-primary {
+            background: #6366f1;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            background: #818cf8;
+            box-shadow: 0 15px 35px rgba(99,102,241,0.25);
+        }
+
+        .btn-secondary {
+            border: 1px solid rgba(255,255,255,0.12);
+            background: rgba(255,255,255,0.04);
+            color: #e2e8f0;
+        }
+
+        .btn-secondary:hover {
+            transform: translateY(-3px);
+            border-color: #818cf8;
+        }
+
+        /* =========================
+           STATS
+        ========================= */
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+            margin-top: 65px;
+        }
+
+        .stat {
+            padding: 20px;
+            border-left: 2px solid #6366f1;
+            background: rgba(255,255,255,0.025);
+        }
+
+        .stat strong {
+            display: block;
+            font-size: 28px;
+        }
+
+        .stat span {
+            color: #64748b;
+            font-size: 13px;
+        }
+
+        /* =========================
+           ABOUT
+        ========================= */
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.4fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .about-card {
+            padding: 35px;
+            border: 1px solid rgba(255,255,255,0.08);
+            background: linear-gradient(
+                145deg,
+                rgba(255,255,255,0.06),
+                rgba(255,255,255,0.015)
+            );
+            border-radius: 20px;
+        }
+
+        .about-card h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .about-card p {
+            color: #94a3b8;
+        }
+
+        /* =========================
+           SKILLS
+        ========================= */
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin-top: 40px;
+        }
+
+        .skill {
+            padding: 20px;
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 14px;
+            background: rgba(255,255,255,0.025);
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .skill:hover {
+            transform: translateY(-5px);
+            border-color: rgba(129,140,248,0.5);
+            background: rgba(129,140,248,0.06);
+        }
+
+        .skill-icon {
+            font-size: 28px;
+            margin-bottom: 8px;
+        }
+
+        .skill span {
+            color: #cbd5e1;
+            font-size: 14px;
+        }
+
+        /* =========================
+           PROJECTS
+        ========================= */
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            margin-top: 45px;
+        }
+
+        .project {
+            position: relative;
+            padding: 30px;
+            min-height: 350px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            border-radius: 20px;
+            border: 1px solid rgba(255,255,255,0.08);
+            background:
+                radial-gradient(
+                    circle at top right,
+                    rgba(99,102,241,0.15),
+                    transparent 40%
+                ),
+                rgba(255,255,255,0.025);
+            overflow: hidden;
+            transition: 0.4s;
+        }
+
+        .project::before {
+            content: "";
+            position: absolute;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: rgba(129,140,248,0.1);
+            filter: blur(30px);
+            right: -30px;
+            top: -30px;
+        }
+
+        .project:hover {
+            transform: translateY(-8px);
+            border-color: rgba(129,140,248,0.4);
+            box-shadow: 0 25px 60px rgba(0,0,0,0.3);
+        }
+
+        .project-number {
+            color: #6366f1;
+            font-weight: 800;
+            font-size: 13px;
+            letter-spacing: 2px;
+        }
+
+        .project h3 {
+            font-size: 27px;
+            margin: 15px 0;
+        }
+
+        .project p {
+            color: #94a3b8;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 7px;
+            margin-bottom: 25px;
+        }
+
+        .tag {
+            padding: 5px 9px;
+            border-radius: 6px;
+            background: rgba(129,140,248,0.1);
+            color: #a5b4fc;
+            font-size: 11px;
+        }
+
+        .project-link {
+            color: #a5b4fc;
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .project-link:hover {
+            color: white;
+        }
+
+        /* =========================
+           PROCESS
+        ========================= */
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+            margin-top: 40px;
+        }
+
+        .process {
+            padding: 25px;
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 16px;
+            background: rgba(255,255,255,0.02);
+        }
+
+        .process-number {
+            color: #818cf8;
+            font-weight: 800;
+            font-size: 14px;
+        }
+
+        .process h3 {
+            margin: 15px 0 8px;
+        }
+
+        .process p {
+            color: #64748b;
+            font-size: 13px;
+        }
+
+        /* =========================
+           CONTACT
+        ========================= */
+
+        .contact {
+            text-align: center;
+        }
+
+        .contact-box {
+            max-width: 800px;
+            margin: 40px auto 0;
+            padding: 50px 30px;
+            border-radius: 25px;
+            border: 1px solid rgba(129,140,248,0.2);
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(99,102,241,0.12),
+                    rgba(14,165,233,0.05)
+                );
+        }
+
+        .contact-box p {
+            color: #94a3b8;
+            margin-bottom: 30px;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            border-top: 1px solid rgba(255,255,255,0.07);
+            padding: 30px 20px;
+            text-align: center;
+            color: #64748b;
+            font-size: 13px;
+        }
+
+        /* =========================
+           REVEAL ANIMATION
+        ========================= */
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(35px);
+            transition: 0.8s ease;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 800px) {
+
+            .menu-btn {
+                display: block;
+            }
+
+            .nav-links {
+                position: absolute;
+                top: 75px;
+                left: 15px;
+                right: 15px;
+                display: none;
+                flex-direction: column;
+                gap: 0;
+                padding: 15px;
+                background: rgba(7,11,22,0.97);
+                border: 1px solid rgba(255,255,255,0.08);
+                border-radius: 14px;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links a {
+                display: block;
+                padding: 12px;
+            }
+
+            .hero h1 {
+                letter-spacing: -2px;
+            }
+
+            .stats {
+                grid-template-columns: 1fr;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .skills-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .process-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 500px) {
+
+            section {
+                padding: 80px 0;
+            }
+
+            .hero {
+                min-height: auto;
+                padding-top: 140px;
+                padding-bottom: 80px;
+            }
+
+            .hero h1 {
+                font-size: 48px;
+            }
+
+            .hero-description {
+                font-size: 16px;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .process-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .project {
+                min-height: auto;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<header>
+
+    <nav>
+
+        <a href="#home" class="logo">
+            Mubasserabanu<span>.</span>
+        </a>
+
+        <button class="menu-btn" onclick="toggleMenu()">
+            ☰
+        </button>
+
+        <ul class="nav-links" id="navLinks">
+
+            <li>
+                <a href="#home">Home</a>
+            </li>
+
+            <li>
+                <a href="#about">About</a>
+            </li>
+
+            <li>
+                <a href="#skills">Skills</a>
+            </li>
+
+            <li>
+                <a href="#projects">Projects</a>
+            </li>
+
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<main>
+
+<section class="hero" id="home">
+
+    <div class="container">
+
+        <div class="hero-content reveal">
+
+            <div class="availability">
+
+                <span class="availability-dot"></span>
+
+                Web Developer • WordPress • PHP
+
+            </div>
+
+            <h1>
+
+                Hi, I'm
+
+                <span class="gradient-text">
+                    Mubasserabanu.
+                </span>
+
+                <br>
+
+                I build digital experiences.
+
+            </h1>
+
+            <p class="hero-description">
+
+                I'm a web developer focused on creating responsive,
+                modern and user-friendly websites using technologies
+                such as WordPress, PHP, HTML, CSS and JavaScript.
+
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#projects"
+                   class="btn btn-primary">
+
+                    View My Work →
+
+                </a>
+
+                <a href="#contact"
+                   class="btn btn-secondary">
+
+                    Contact Me
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="stats reveal">
+
+            <div class="stat">
+
+                <strong>4+</strong>
+
+                <span>
+                    Development Projects
+                </span>
+
+            </div>
+
+            <div class="stat">
+
+                <strong>2</strong>
+
+                <span>
+                    Live Websites
+                </span>
+
+            </div>
+
+            <div class="stat">
+
+                <strong>5+</strong>
+
+                <span>
+                    Technologies
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section id="about">
+
+    <div class="container">
+
+        <div class="about-grid">
+
+            <div class="reveal">
+
+                <div class="section-label">
+                    About Me
+                </div>
+
+                <h2 class="section-title">
+                    Turning ideas into functional websites.
+                </h2>
+
+            </div>
+
+            <div class="about-card reveal">
+
+                <h3>
+                    Developer & Problem Solver
+                </h3>
+
+                <p>
+
+                    I enjoy building websites and digital solutions
+                    that combine clean design, usability and
+                    reliable functionality.
+
+                    <br><br>
+
+                    My experience includes working with WordPress,
+                    PHP, HTML, CSS, JavaScript, SEO, website
+                    deployment, SSL and domain configuration.
+
+                    <br><br>
+
+                    I also have experience developing university
+                    projects using PHP and Android development.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SKILLS
+========================= -->
+
+<section id="skills">
+
+    <div class="container">
+
+        <div class="reveal">
+
+            <div class="section-label">
+                Skills & Technologies
+            </div>
+
+            <h2 class="section-title">
+                Tools I work with.
+            </h2>
+
+            <p class="section-text">
+
+                A combination of web development, CMS,
+                backend, SEO and deployment technologies.
+
+            </p>
+
+        </div>
+
+
+        <div class="skills-grid">
+
+            <div class="skill reveal">
+                <div class="skill-icon">🌐</div>
+                <span>HTML5</span>
+            </div>
+
+            <div class="skill reveal">
+                <div class="skill-icon">🎨</div>
+                <span>CSS3</span>
+            </div>
+
+            <div class="skill reveal">
+                <div class="skill-icon">⚡</div>
+                <span>JavaScript</span>
+            </div>
+
+            <div class="skill reveal">
+                <div class="skill-icon">🐘</div>
+                <span>PHP</span>
+            </div>
+
+            <div class="skill reveal">
+                <div class="skill-icon">📝</div>
+                <span>WordPress</span>
+            </div>
+
+            <div class="skill reveal">
+                <div class="skill-icon">🔎</div>
+                <span>SEO</span>
+            </div>
+
+            <div class="skill reveal">
+                <div class="skill-icon">🔐</div>
+                <span>SSL & Security</span>
+            </div>
+
+            <div class="skill reveal">
+                <div class="skill-icon">📱</div>
+                <span>Android</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     PROJECTS
+========================= -->
+
+<section id="projects">
+
+    <div class="container">
+
+        <div class="reveal">
+
+            <div class="section-label">
+                Selected Work
+            </div>
+
+            <h2 class="section-title">
+                Projects I've worked on.
+            </h2>
+
+            <p class="section-text">
+
+                A selection of live client work and academic
+                development projects.
+
+            </p>
+
+        </div>
+
+
+        <div class="projects-grid">
+
+
+            <!-- PROJECT 01 -->
+
+            <article class="project reveal">
+
+                <div>
+
+                    <div class="project-number">
+                        PROJECT 01
+                    </div>
+
+                    <h3>
+                        Saarland-Archiv
+                    </h3>
+
+                    <p>
+
+                        A professional web project developed and
+                        configured using WordPress, including
+                        responsive design, SEO, SSL, domain
+                        configuration and website deployment.
+
+                    </p>
+
+                    <div class="tags">
+
+                        <span class="tag">WordPress</span>
+
+                        <span class="tag">SEO</span>
+
+                        <span class="tag">SSL</span>
+
+                        <span class="tag">Responsive</span>
+
+                        <span class="tag">DNS</span>
+
+                    </div>
+
+                </div>
+
+                <a
+                    href="https://saarland-archiv.de/"
+                    target="_blank"
+                    rel="noopener"
+                    class="project-link">
+
+                    Visit Live Website ↗
+
+                </a>
+
+            </article>
+
+
+            <!-- PROJECT 02 -->
+
+            <article class="project reveal">
+
+                <div>
+
+                    <div class="project-number">
+                        PROJECT 02
+                    </div>
+
+                    <h3>
+                        Briefkastencloud
+                    </h3>
+
+                    <p>
+
+                        A live WordPress website project involving
+                        website configuration, responsive design,
+                        SEO implementation, SSL and domain setup.
+
+                    </p>
+
+                    <div class="tags">
+
+                        <span class="tag">WordPress</span>
+
+                        <span class="tag">SEO</span>
+
+                        <span class="tag">SSL</span>
+
+                        <span class="tag">DNS</span>
+
+                        <span class="tag">Web Design</span>
+
+                    </div>
+
+                </div>
+
+                <a
+                    href="https://briefkastencloud.de/"
+                    target="_blank"
+                    rel="noopener"
+                    class="project-link">
+
+                    Visit Live Website ↗
+
+                </a>
+
+            </article>
+
+
+            <!-- PROJECT 03 -->
+
+            <article class="project reveal">
+
+                <div>
+
+                    <div class="project-number">
+                        PROJECT 03
+                    </div>
+
+                    <h3>
+                        PHP University Project
+                    </h3>
+
+                    <p>
+
+                        An academic project developed using PHP
+                        and web technologies as part of university
+                        development work.
+
+                        Project details and source code can be
+                        added here.
+
+                    </p>
+
+                    <div class="tags">
+
+                        <span class="tag">PHP</span>
+
+                        <span class="tag">HTML</span>
+
+                        <span class="tag">CSS</span>
+
+                        <span class="tag">MySQL</span>
+
+                    </div>
+
+                </div>
+
+                <a
+                    href="#contact"
+                    class="project-link">
+
+                    Request Project Details →
+
+                </a>
+
+            </article>
+
+
+            <!-- PROJECT 04 -->
+
+            <article class="project reveal">
+
+                <div>
+
+                    <div class="project-number">
+                        PROJECT 04
+                    </div>
+
+                    <h3>
+                        Android University Project
+                    </h3>
+
+                    <p>
+
+                        An academic Android application developed
+                        as part of university coursework, focused
+                        on mobile application development and
+                        practical problem solving.
+
+                    </p>
+
+                    <div class="tags">
+
+                        <span class="tag">Android</span>
+
+                        <span class="tag">Java</span>
+
+                        <span class="tag">Mobile</span>
+
+                        <span class="tag">University Project</span>
+
+                    </div>
+
+                </div>
+
+                <a
+                    href="#contact"
+                    class="project-link">
+
+                    Request Project Details →
+
+                </a>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     PROCESS
+========================= -->
+
+<section>
+
+    <div class="container">
+
+        <div class="reveal">
+
+            <div class="section-label">
+                How I Work
+            </div>
+
+            <h2 class="section-title">
+                From idea to live website.
+            </h2>
+
+        </div>
+
+
+        <div class="process-grid">
+
+            <div class="process reveal">
+
+                <div class="process-number">
+                    01
+                </div>
+
+                <h3>
+                    Understand
+                </h3>
+
+                <p>
+                    Understand the project requirements,
+                    goals and audience.
+                </p>
+
+            </div>
+
+
+            <div class="process reveal">
+
+                <div class="process-number">
+                    02
+                </div>
+
+                <h3>
+                    Develop
+                </h3>
+
+                <p>
+                    Build the website using suitable
+                    technologies and responsive design.
+                </p>
+
+            </div>
+
+
+            <div class="process reveal">
+
+                <div class="process-number">
+                    03
+                </div>
+
+                <h3>
+                    Optimize
+                </h3>
+
+                <p>
+                    Work on SEO, performance, security,
+                    SSL and technical configuration.
+                </p>
+
+            </div>
+
+
+            <div class="process reveal">
+
+                <div class="process-number">
+                    04
+                </div>
+
+                <h3>
+                    Deploy
+                </h3>
+
+                <p>
+                    Configure the domain and launch the
+                    website for real users.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section id="contact" class="contact">
+
+    <div class="container">
+
+        <div class="contact-box reveal">
+
+            <div class="section-label">
+                Get In Touch
+            </div>
+
+            <h2 class="section-title">
+                Let's build something together.
+            </h2>
+
+            <p>
+
+                Interested in working together or want to
+                know more about one of my projects?
+
+                Feel free to get in touch.
+
+            </p>
+
+            <div class="contact-links">
+
+                <!-- Replace email with your actual email -->
+
+                <a
+                    href="mailto:YOUR_EMAIL@example.com"
+                    class="btn btn-primary">
+
+                    Email Me
+
+                </a>
+
+                <a
+                    href="https://github.com/2326257mubasserabanushaikh-sudo"
+                    target="_blank"
+                    rel="noopener"
+                    class="btn btn-secondary">
+
+                    GitHub ↗
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    © <span id="year"></span>
+    Mubasserabanu Shaikh.
+    All rights reserved.
+
+</footer>
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script>
+
+    /* Mobile menu */
+
+    function toggleMenu() {
+
+        document
+            .getElementById("navLinks")
+            .classList
+            .toggle("active");
+
+    }
+
+
+    /* Close mobile menu */
+
+    document
+        .querySelectorAll(".nav-links a")
+        .forEach(function(link) {
+
+            link.addEventListener("click", function() {
+
+                document
+                    .getElementById("navLinks")
+                    .classList
+                    .remove("active");
+
+            });
+
+        });
+
+
+    /* Scroll reveal */
+
+    const observer = new IntersectionObserver(
+
+        function(entries) {
+
+            entries.forEach(function(entry) {
+
+                if (entry.isIntersecting) {
+
+                    entry.target.classList.add("active");
+
+                }
+
+            });
+
+        },
+
+        {
+            threshold: 0.12
+        }
+
+    );
+
+
+    document
+        .querySelectorAll(".reveal")
+        .forEach(function(element) {
+
+            observer.observe(element);
+
+        });
+
+
+    /* Current year */
+
+    document
+        .getElementById("year")
+        .textContent = new Date().getFullYear();
+
+</script>
+
+</body>
+</html>
